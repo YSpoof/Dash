@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+    <script defer src="main.js"></script>
+    <!-- SEO -->
+    <!-- Primary Meta Tags -->
+    <title>Dashy</title>
+    <meta name="title" content="Dashy" />
+    <meta name="description" content="A simple dashboard/home screen for browsers." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dashy.lzart.com.br/" />
+    <meta property="og:title" content="Dashy" />
+    <meta property="og:description" content="A simple dashboard/home screen for browsers." />
+    <meta property="og:image" content="/base.webp" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://dashy.lzart.com.br/" />
+    <meta property="twitter:title" content="Dashy" />
+    <meta property="twitter:description" content="A simple dashboard/home screen for browsers." />
+    <meta property="twitter:image" content="/base.webp" />
+  </head>
+  <body class="bg-cover bg-center bg-no-repeat bg-fixed">
+  <div class='bg-black/30 h-screen font-bold grid place-items-center'>
+    <main class="">
+      <div
+        onclick="showMenu()"
+        class="mx-auto bg-base-300/80 w-max p-6 flex flex-col justify-around text-center items-center backdrop-blur-sm rounded-md shadow-2xl"
+      >
+        <p id="clock" class="text-4xl font-mono">00:00:00 AM</p>
+        <img
+          id="profPic"
+          width="150px"
+          height="150px"
+          class="rounded-full shadow-lg m-4 border object-cover [image-rendering:pixelated] transition-all hover:scale-105"
+          src=""
+          alt="Foto de perfil"
+          title="Clique para configurar o Dashy"
+        />
+        <p id="message">Olá</p>
+      </div>
+        <search class="mx-auto text-center mt-4">
+          <input
+            id="searchInput"
+            list="recentSearches"
+            type="text"
+            placeholder="Pesquisar no Google"
+            class="input w-full max-w-xs rounded-md bg-base-300/80 backdrop-blur-sm text-center shadow-md"
+          />
+        </search>
+    </main>
+    <footer class="fixed bottom-0">
+      <div class="flex justify-center p-4">
+        <p class="text-center">
+          <a class="link" href="https://lzart.com.br" target="_blank"
+            >Desenvolvido por LZArt</a
+          >
+        </p>
+      </div>
+    </footer>
+  </div>
+    {% include 'settingsMenu.njk' %}
+    <datalist id='recentSearches'></datalist>
+  </body>
+</html>
